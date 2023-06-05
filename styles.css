@@ -1,5 +1,32 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
 
+@keyframes nextButtonAnimation {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(30%);
+    }
+}
+
+@keyframes backButtonAnimation {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-30%);
+    }
+}
+
+@keyframes repeatButtonAnimation {
+    from {
+        transform: rotate(0);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -40,6 +67,11 @@ section a {
     cursor: pointer;
     padding: 1.5rem;
     top: 90%;
+    transition: .5s;
+}
+
+section a:hover {
+    color: white;
 }
 
 section a.next {
@@ -52,10 +84,17 @@ section a.back {
 
 i.fa-long-arrow-right {
     margin-left: 10px;
+    animation: nextButtonAnimation 2s infinite alternate;
 }
 
-i.fa-long-arrow-left, i.fa-repeat {
+i.fa-long-arrow-left {
     margin-right: 10px;
+    animation: backButtonAnimation 2s infinite alternate;
+}
+
+i.fa-repeat {
+    margin-right: 10px;
+    animation: repeatButtonAnimation 8s infinite alternate-reverse;;
 }
 
 .hidden {
