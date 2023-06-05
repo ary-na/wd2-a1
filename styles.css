@@ -24,9 +24,6 @@ h1 {
 
 section {
     min-height: 100vh;
-}
-
-section {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -57,11 +54,7 @@ i.fa-long-arrow-right {
     margin-left: 10px;
 }
 
-i.fa-long-arrow-left {
-    margin-right: 10px;
-}
-
-i.fa-repeat {
+i.fa-long-arrow-left, i.fa-repeat {
     margin-right: 10px;
 }
 
