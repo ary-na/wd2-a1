@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --color-green-primary: #264653;
+    --color-gray-primary: #e5e5e5;
+}
+
+body {
+    background-color: var(--color-green-primary);
+    font-family: 'Lato', sans-serif;
+    color: var(--color-gray-primary);
+    font-size: 1rem;
+}
+
+h1 {
+    font-size: 500%;
+    font-weight: 400;
+}
+
+section {
+    min-height: 100vh;
+}
+
+section#main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+section#main p {
+    font-size: 120%;
+}
+
+section#budget, section#expensesOne, section#expensesTwo, section#expensesThree, section#results {
+    display: none;
+}
