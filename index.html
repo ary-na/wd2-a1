@@ -8,6 +8,8 @@
     <meta name="description" content="This is a holiday budget calculator application.">
     <meta name="keywords" content="budget calculator, calculator, holiday budget calculator">
     <link type="text/css" rel="stylesheet" href="styles.css">
+    <link type="text/css" rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <script src="main.js"></script>
 </head>
 <body>
@@ -17,12 +19,32 @@
         <h1>Holiday Budget Calculator</h1>
         <p>With the help of this application, you can effortlessly calculate all the expenses associated with your
             vacation.</p>
+        <a class="next" onclick="displaySection('#main', '#budget')">Get Started<i class="fa fa-long-arrow-right"></i></a>
     </section>
-    <section id="budget"></section>
-    <section id="expensesOne"></section>
-    <section id="expensesTwo"></section>
-    <section id="expensesThree"></section>
-    <section id="results"></section>
+    <section id="budget" class="hidden">
+        <h2>Budget</h2>
+        <a class="back" onclick="displaySection('#budget', '#main')"><i class="fa fa-long-arrow-left"></i>Back</a>
+        <a class="next" onclick="displaySection('#budget', '#expensesOne')">Next<i class="fa fa-long-arrow-right"></i></a>
+    </section>
+    <section id="expensesOne" class="hidden">
+        <h2>Expenses One</h2>
+        <a class="back" onclick="displaySection('#expensesOne', '#budget')"><i class="fa fa-long-arrow-left"></i>Back</a>
+        <a class="next" onclick="displaySection('#expensesOne', '#expensesTwo')">Next<i class="fa fa-long-arrow-right"></i></a>
+    </section>
+    <section id="expensesTwo" class="hidden">
+        <h2>Expenses Two</h2>
+        <a class="back" onclick="displaySection('#expensesTwo', '#expensesOne')"><i class="fa fa-long-arrow-left"></i>Back</a>
+        <a class="next" onclick="displaySection('#expensesTwo', '#expensesThree')">Next<i class="fa fa-long-arrow-right"></i></a>
+    </section>
+    <section id="expensesThree" class="hidden">
+        <h2>Expenses Three</h2>
+        <a class="back" onclick="displaySection('#expensesThree', '#expensesTwo')"><i class="fa fa-long-arrow-left"></i>Back</a>
+        <a class="next" onclick="displaySection('#expensesThree', '#results')">Result<i class="fa fa-long-arrow-right"></i></a>
+    </section>
+    <section id="results" class="hidden">
+        <h2>Results</h2>
+        <a class="back" onclick="window.location.href='index.html'"><i class="fa fa-repeat"></i>Try Again</a>
+    </section>
 </main>
 
 </body>
