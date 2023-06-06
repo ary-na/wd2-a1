@@ -38,9 +38,9 @@
 }
 
 body {
-    background-color: var(--color-green-primary);
+    background-color: var(--color-gray-primary);
     font-family: 'Lato', sans-serif;
-    color: var(--color-gray-primary);
+    color: var(--color-green-primary);
     font-size: 1rem;
 }
 
@@ -58,6 +58,11 @@ section {
     gap: 2rem;
 }
 
+section#main, section#results {
+    background-color: var(--color-green-primary);
+    color: var(--color-gray-primary);
+}
+
 section#main p {
     font-size: 120%;
 }
@@ -68,10 +73,6 @@ section a {
     padding: 1.5rem;
     top: 90%;
     transition: .5s;
-}
-
-section a:hover {
-    color: white;
 }
 
 section a.next {
@@ -100,3 +101,6 @@ i.fa-repeat {
 .hidden {
     display: none;
 }
+
+/********************************************************************/
+
