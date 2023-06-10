@@ -17,41 +17,73 @@
     <section id="main">
         <h1>Holiday Budget Calculator</h1>
         <p>With the help of this application, you can effortlessly calculate all the expenses associated with your
-            vacation.</p>
-        <a class="next" onclick="displaySection('#main', '#budget')">Get Started<i
-                class="fa fa-long-arrow-right"></i></a>
+            holiday.</p>
+        <a class="next" onclick="displaySection('#main', '#budget')">Get Started<i class="fa fa-long-arrow-right"></i></a>
     </section>
     <section id="budget" class="hidden">
-        <h2>Budget</h2>
-        <form>
-            <label for="budgetInput">Budget</label>
-            <input name="budget" id="budgetInput" type="number" placeholder="Enter your budget..." required>
-        </form>
+        <div>
+            <h2>Budget</h2>
+            <p>To ensure all your expenses fit within your budget, please provide us with your budget so we can calculate accordingly.</p>
+            <form>
+                <label for="budgetInput">Budget</label>
+                <input name="budget" id="budgetInput" type="number" min="0" max="10000" placeholder="Enter your budget...">
+            </form>
+        </div>
         <a class="back" onclick="displaySection('#budget', '#main')"><i class="fa fa-long-arrow-left"></i>Back</a>
-        <a class="next" onclick="displaySection('#budget', '#expensesOne')">Next<i
-                class="fa fa-long-arrow-right"></i></a>
+        <a class="next" onclick="displaySection('#budget', '#expensesOne')">Next<i class="fa fa-long-arrow-right"></i></a>
     </section>
     <section id="expensesOne" class="hidden">
-        <h2>Expenses One</h2>
-        <a class="back" onclick="displaySection('#expensesOne', '#budget')"><i
-                class="fa fa-long-arrow-left"></i>Back</a>
-        <a class="next" onclick="displaySection('#expensesOne', '#expensesTwo')">Next<i
-                class="fa fa-long-arrow-right"></i></a>
+        <div>
+            <h2>Transport</h2>
+            <p>Enter your transport expenses so they can be calculated against your budget.</p>
+            <form>
+                <label for="flightCostInput">Flight</label>
+                <input name="flightCost" id="flightCostInput" type="number" min="0" max="10000" placeholder="Enter flight costs...">
+                <label for="taxiCostInput">Taxi</label>
+                <input name="taxiCost" id="taxiCostInput" type="number" min="0" max="10000" placeholder="Enter taxi costs ...">
+                <label for="trainCostInput">Train</label>
+                <input name="trainCost" id="trainCostInput" type="number" min="0" max="10000" placeholder="Enter train costs...">
+            </form>
+        </div>
+        <a class="back" onclick="displaySection('#expensesOne', '#budget')"><i class="fa fa-long-arrow-left"></i>Back</a>
+        <a class="next" onclick="displaySection('#expensesOne', '#expensesTwo')">Next<i class="fa fa-long-arrow-right"></i></a>
     </section>
     <section id="expensesTwo" class="hidden">
-        <h2>Expenses Two</h2>
+        <div>
+            <h2>Accommodation</h2>
+            <p>Enter your accommodation expenses so they can also be calculated against your budget.</p>
+            <form>
+                <label for="hotelCostInput">Hotel</label>
+                <input name="hotelCost" id="hotelCostInput" type="number" min="0" max="10000" placeholder="Enter hotel costs...">
+                <label for="lodgeCostInput">Lodge</label>
+                <input name="lodgeCost" id="lodgeCostInput" type="number" min="0" max="10000" placeholder="Enter lodge costs ...">
+                <label for="motelCostInput">Motel</label>
+                <input name="motelCost" id="motelCostInput" type="number" min="0" max="10000" placeholder="Enter motel costs...">
+            </form>
+        </div>
         <a class="back" onclick="displaySection('#expensesTwo', '#expensesOne')"><i class="fa fa-long-arrow-left"></i>Back</a>
-        <a class="next" onclick="displaySection('#expensesTwo', '#expensesThree')">Next<i
-                class="fa fa-long-arrow-right"></i></a>
+        <a class="next" onclick="displaySection('#expensesTwo', '#expensesThree')">Next<i class="fa fa-long-arrow-right"></i></a>
     </section>
     <section id="expensesThree" class="hidden">
-        <h2>Expenses Three</h2>
+        <div>
+            <h2>Dining</h2>
+            <p>Finally, enter your dinning expenses so they can be calculated against your budget.</p>
+            <form>
+                <label for="breakfastCostInput">Breakfast</label>
+                <input name="breakfastCost" id="breakfastCostInput" type="number" min="0" max="10000" placeholder="Enter breakfast costs...">
+                <label for="lunchCostInput">Lunch</label>
+                <input name="lunchCost" id="lunchCostInput" type="number" min="0" max="10000" placeholder="Enter lunch costs ...">
+                <label for="dinnerCostInput">Dinner</label>
+                <input name="dinnerCost" id="dinnerCostInput" type="number" min="0" max="10000" placeholder="Enter dinner costs...">
+            </form>
+        </div>
         <a class="back" onclick="displaySection('#expensesThree', '#expensesTwo')"><i class="fa fa-long-arrow-left"></i>Back</a>
-        <a class="next" onclick="displaySection('#expensesThree', '#results')">Result<i
-                class="fa fa-long-arrow-right"></i></a>
+        <a class="next" onclick="displaySection('#expensesThree', '#results')">Result<i class="fa fa-long-arrow-right"></i></a>
     </section>
     <section id="results" class="hidden">
-        <h2>Results</h2>
+        <div>
+
+        </div>
         <a class="back" onclick="window.location.href='index.html'"><i class="fa fa-repeat"></i>Try Again</a>
     </section>
 </main>
