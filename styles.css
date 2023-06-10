@@ -35,6 +35,7 @@
 :root {
     --color-green-primary: #264653;
     --color-gray-primary: #e5e5e5;
+    --color-gray-secondary: #adb5bd;
 }
 
 body {
@@ -49,6 +50,12 @@ h1 {
     font-weight: 400;
 }
 
+h2 {
+    font-size: 500%;
+    font-weight: 400;
+    margin-bottom: 2rem;
+}
+
 section {
     min-height: 100vh;
     display: flex;
@@ -57,6 +64,18 @@ section {
     align-items: center;
     gap: 2rem;
 }
+
+section div {
+    display: flex;
+    flex-direction: column;
+    min-height: 90vh;
+    width: 90vw;
+}
+
+section div p {
+    margin-bottom: 4rem;
+}
+
 
 section#main, section#results {
     background-color: var(--color-green-primary);
@@ -71,16 +90,16 @@ section a {
     position: absolute;
     cursor: pointer;
     padding: 1.5rem;
-    top: 90%;
+    top: 90vh;
     transition: .5s;
 }
 
 section a.next {
-    left: 90%;
+    left: 90vw;
 }
 
 section a.back {
-    right: 90%;
+    right: 90vw;
 }
 
 i.fa-long-arrow-right {
@@ -100,6 +119,31 @@ i.fa-repeat {
 
 .hidden {
     display: none;
+}
+
+form {
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+form label {
+    margin-bottom: .5rem;
+}
+
+form [type] {
+    width: 40vw;
+    padding: 1rem;
+    border: 1px var(--color-gray-secondary) solid;
+    border-radius: 4px;
+    transition: .5s;
+    margin-bottom: 1rem;
+}
+
+form [type]:focus {
+    outline: none;
+    border: 1px var(--color-green-primary) solid;
 }
 
 /********************************************************************/
