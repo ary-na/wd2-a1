@@ -23,7 +23,7 @@
     <section id="budget" class="hidden">
         <div>
             <h2>Budget</h2>
-            <p>To ensure all your expenses fit within your budget, please provide us with your budget so we can calculate accordingly.</p>
+            <p>To ensure all your expenses fit within your budget, please provide us with your budget, so we can calculate accordingly.</p>
             <form>
                 <label for="budgetInput">Budget</label>
                 <input name="budget" id="budgetInput" type="number" min="0" max="10000" placeholder="Enter your budget...">
@@ -35,7 +35,7 @@
     <section id="expensesOne" class="hidden">
         <div>
             <h2>Transport</h2>
-            <p>Enter your transport expenses so they can be calculated against your budget.</p>
+            <p>Enter your transport expenses, so they can be calculated against your budget.</p>
             <form>
                 <label for="flightCostInput">Flight</label>
                 <input name="flightCost" id="flightCostInput" type="number" min="0" max="10000" placeholder="Enter flight costs...">
@@ -51,7 +51,7 @@
     <section id="expensesTwo" class="hidden">
         <div>
             <h2>Accommodation</h2>
-            <p>Enter your accommodation expenses so they can also be calculated against your budget.</p>
+            <p>Enter your accommodation expenses, so they can also be calculated against your budget.</p>
             <form>
                 <label for="hotelCostInput">Hotel</label>
                 <input name="hotelCost" id="hotelCostInput" type="number" min="0" max="10000" placeholder="Enter hotel costs...">
@@ -67,7 +67,7 @@
     <section id="expensesThree" class="hidden">
         <div>
             <h2>Dining</h2>
-            <p>Finally, enter your dinning expenses so they can be calculated against your budget.</p>
+            <p>Finally, enter your dinning expenses, so they can be calculated against your budget.</p>
             <form>
                 <label for="breakfastCostInput">Breakfast</label>
                 <input name="breakfastCost" id="breakfastCostInput" type="number" min="0" max="10000" placeholder="Enter breakfast costs...">
@@ -78,7 +78,7 @@
             </form>
         </div>
         <a class="back" onclick="displaySection('#expensesThree', '#expensesTwo')"><i class="fa fa-long-arrow-left"></i>Back</a>
-        <a class="next" onclick="displaySection('#expensesThree', '#results')">Result<i class="fa fa-long-arrow-right"></i></a>
+        <a class="next" id="calculateBtn" onclick="displaySection('#expensesThree', '#results')">Result<i class="fa fa-long-arrow-right"></i></a>
     </section>
     <section id="results" class="hidden">
         <div>
