@@ -5,3 +5,10 @@
 For more information visit [Academic Integrity at Curtin](https://www.curtin.edu.au/students/essentials/rights/academic-integrity/)
 
 ### References
+
+https://coolors.co/palettes/popular
+
+https://fonts.google.com/specimen/Lato?category=Sans+Serif
+
+https://weekendprojects.dev/posts/css-rotate-animations-examples/
+
