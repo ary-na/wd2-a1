@@ -72,6 +72,10 @@ section div {
     width: 90vw;
 }
 
+section#results > div {
+    flex-direction: row;
+}
+
 section div p {
     margin-bottom: 4rem;
 }
@@ -121,6 +125,14 @@ i.fa-repeat {
     display: none;
 }
 
+.align-end {
+    text-align: end;
+}
+
+.subtotal-padding {
+    padding-bottom: 1rem;
+}
+
 form {
     display: flex;
     flex-grow: 1;
@@ -144,6 +156,14 @@ form [type] {
 form [type]:focus {
     outline: none;
     border: 1px var(--color-green-primary) solid;
+}
+
+table {
+    padding: 2rem;
+    background-color: var(--color-gray-primary);
+    height: 90vh;
+    border-radius: 4px;
+    color: var(--color-green-primary);
 }
 
 /********************************************************************/
