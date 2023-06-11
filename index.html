@@ -8,7 +8,8 @@
     <meta name="description" content="This is a holiday budget calculator application.">
     <meta name="keywords" content="budget calculator, calculator, holiday budget calculator">
     <link type="text/css" rel="stylesheet" href="styles.css">
-    <link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link type="text/css" rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <script src="main.js"></script>
 </head>
 <body>
@@ -18,19 +19,23 @@
         <h1>Holiday Budget Calculator</h1>
         <p>With the help of this application, you can effortlessly calculate all the expenses associated with your
             holiday.</p>
-        <a class="next" onclick="displaySection('#main', '#budget')">Get Started<i class="fa fa-long-arrow-right"></i></a>
+        <a class="next" onclick="displaySection('#main', '#budget')">Get Started<i
+                class="fa fa-long-arrow-right"></i></a>
     </section>
     <section id="budget" class="hidden">
         <div>
             <h2>Budget</h2>
-            <p>To ensure all your expenses fit within your budget, please provide us with your budget, so we can calculate accordingly.</p>
+            <p>To ensure all your expenses fit within your budget, please provide us with your budget, so we can
+                calculate accordingly.</p>
             <form>
                 <label for="budgetInput">Budget</label>
-                <input name="budget" id="budgetInput" type="number" min="0" max="10000" placeholder="Enter your budget...">
+                <input name="budget" id="budgetInput" type="number" min="0" max="10000"
+                       placeholder="Enter your budget...">
             </form>
         </div>
         <a class="back" onclick="displaySection('#budget', '#main')"><i class="fa fa-long-arrow-left"></i>Back</a>
-        <a class="next" onclick="displaySection('#budget', '#expensesOne')">Next<i class="fa fa-long-arrow-right"></i></a>
+        <a class="next" onclick="displaySection('#budget', '#expensesOne')">Next<i
+                class="fa fa-long-arrow-right"></i></a>
     </section>
     <section id="expensesOne" class="hidden">
         <div>
@@ -38,15 +43,20 @@
             <p>Enter your transport expenses, so they can be calculated against your budget.</p>
             <form>
                 <label for="flightCostInput">Flight</label>
-                <input name="flightCost" id="flightCostInput" class="expensesCat1" type="number" min="0" max="10000" placeholder="Enter flight costs...">
+                <input name="flightCost" id="flightCostInput" class="expensesCat1" type="number" min="0" max="10000"
+                       placeholder="Enter flight costs...">
                 <label for="taxiCostInput">Taxi</label>
-                <input name="taxiCost" id="taxiCostInput" class="expensesCat2" type="number" min="0" max="10000" placeholder="Enter taxi costs ...">
+                <input name="taxiCost" id="taxiCostInput" class="expensesCat2" type="number" min="0" max="10000"
+                       placeholder="Enter taxi costs ...">
                 <label for="trainCostInput">Train</label>
-                <input name="trainCost" id="trainCostInput" class="expensesCat3" type="number" min="0" max="10000" placeholder="Enter train costs...">
+                <input name="trainCost" id="trainCostInput" class="expensesCat3" type="number" min="0" max="10000"
+                       placeholder="Enter train costs...">
             </form>
         </div>
-        <a class="back" onclick="displaySection('#expensesOne', '#budget')"><i class="fa fa-long-arrow-left"></i>Back</a>
-        <a class="next" onclick="displaySection('#expensesOne', '#expensesTwo')">Next<i class="fa fa-long-arrow-right"></i></a>
+        <a class="back" onclick="displaySection('#expensesOne', '#budget')"><i
+                class="fa fa-long-arrow-left"></i>Back</a>
+        <a class="next" onclick="displaySection('#expensesOne', '#expensesTwo')">Next<i
+                class="fa fa-long-arrow-right"></i></a>
     </section>
     <section id="expensesTwo" class="hidden">
         <div>
@@ -54,15 +64,19 @@
             <p>Enter your accommodation expenses, so they can also be calculated against your budget.</p>
             <form>
                 <label for="hotelCostInput">Hotel</label>
-                <input name="hotelCost" id="hotelCostInput" class="expensesCat1" type="number" min="0" max="10000" placeholder="Enter hotel costs...">
+                <input name="hotelCost" id="hotelCostInput" class="expensesCat1" type="number" min="0" max="10000"
+                       placeholder="Enter hotel costs...">
                 <label for="lodgeCostInput">Lodge</label>
-                <input name="lodgeCost" id="lodgeCostInput" class="expensesCat2" type="number" min="0" max="10000" placeholder="Enter lodge costs ...">
+                <input name="lodgeCost" id="lodgeCostInput" class="expensesCat2" type="number" min="0" max="10000"
+                       placeholder="Enter lodge costs ...">
                 <label for="motelCostInput">Motel</label>
-                <input name="motelCost" id="motelCostInput" class="expensesCat3" type="number" min="0" max="10000" placeholder="Enter motel costs...">
+                <input name="motelCost" id="motelCostInput" class="expensesCat3" type="number" min="0" max="10000"
+                       placeholder="Enter motel costs...">
             </form>
         </div>
         <a class="back" onclick="displaySection('#expensesTwo', '#expensesOne')"><i class="fa fa-long-arrow-left"></i>Back</a>
-        <a class="next" onclick="displaySection('#expensesTwo', '#expensesThree')">Next<i class="fa fa-long-arrow-right"></i></a>
+        <a class="next" onclick="displaySection('#expensesTwo', '#expensesThree')">Next<i
+                class="fa fa-long-arrow-right"></i></a>
     </section>
     <section id="expensesThree" class="hidden">
         <div>
@@ -70,18 +84,109 @@
             <p>Finally, enter your dinning expenses, so they can be calculated against your budget.</p>
             <form>
                 <label for="breakfastCostInput">Breakfast</label>
-                <input name="breakfastCost" id="breakfastCostInput" class="expensesCat1" type="number" min="0" max="10000" placeholder="Enter breakfast costs...">
+                <input name="breakfastCost" id="breakfastCostInput" class="expensesCat1" type="number" min="0"
+                       max="10000" placeholder="Enter breakfast costs...">
                 <label for="lunchCostInput">Lunch</label>
-                <input name="lunchCost" id="lunchCostInput" class="expensesCat2" type="number" min="0" max="10000" placeholder="Enter lunch costs ...">
+                <input name="lunchCost" id="lunchCostInput" class="expensesCat2" type="number" min="0" max="10000"
+                       placeholder="Enter lunch costs ...">
                 <label for="dinnerCostInput">Dinner</label>
-                <input name="dinnerCost" id="dinnerCostInput" class="expensesCat3" type="number" min="0" max="10000" placeholder="Enter dinner costs...">
+                <input name="dinnerCost" id="dinnerCostInput" class="expensesCat3" type="number" min="0" max="10000"
+                       placeholder="Enter dinner costs...">
             </form>
         </div>
         <a class="back" onclick="displaySection('#expensesThree', '#expensesTwo')"><i class="fa fa-long-arrow-left"></i>Back</a>
-        <a class="next" id="calculateBtn" onclick="displaySection('#expensesThree', '#results')">Result<i class="fa fa-long-arrow-right"></i></a>
+        <a class="next" id="calculateBtn" onclick="displaySection('#expensesThree', '#results')">Result<i
+                class="fa fa-long-arrow-right"></i></a>
     </section>
     <section id="results" class="hidden">
         <div>
+            <div>
+                <img src="" alt="">
+                <p>dfsfdsf</p>
+            </div>
+            <div>
+                <table>
+                    <thead>
+                    <tr>
+                        <td><h3>Categories</h3></td>
+                        <td class="align-end"><h3>Total</h3></td>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td><h4>Category 1</h4></td>
+                    </tr>
+                    <tr>
+                        <td>1. Expense</td>
+                        <td class="align-end">$0.00</td>
+                    </tr>
+                    <tr>
+                        <td>2. Expense</td>
+                        <td class="align-end">$0.00</td>
+                    </tr>
+                    <tr>
+                        <td>3. Expense</td>
+                        <td class="align-end">$0.00</td>
+                    </tr>
+                    <tr>
+                        <td class="subtotal-padding"><h4>Subtotal</h4></td>
+                        <td class="align-end"><h4>$0.00</h4></td>
+                    </tr>
+                    <tr>
+                        <td><h4>Category 2</h4></td>
+                    </tr>
+                    <tr>
+                        <td>1. Expense</td>
+                        <td class="align-end">$0.00</td>
+                    </tr>
+                    <tr>
+                        <td>2. Expense</td>
+                        <td class="align-end">$0.00</td>
+                    </tr>
+                    <tr>
+                        <td>3. Expense</td>
+                        <td class="align-end">$0.00</td>
+                    </tr>
+                    <tr>
+                        <td class="subtotal-padding"><h4>Subtotal</h4></td>
+                        <td class="align-end"><h4>$0.00</h4></td>
+                    </tr>
+                    <tr>
+                        <td><h4>Category 3</h4></td>
+                    </tr>
+                    <tr>
+                        <td>1. Expense</td>
+                        <td class="align-end">$0.00</td>
+                    </tr>
+                    <tr>
+                        <td>2. Expense</td>
+                        <td class="align-end">$0.00</td>
+                    </tr>
+                    <tr>
+                        <td>3. Expense</td>
+                        <td class="align-end">$0.00</td>
+                    </tr>
+                    <tr>
+                        <td class="subtotal-padding"><h4>Subtotal</h4></td>
+                        <td class="align-end"><h4>$0.00</h4></td>
+                    </tr>
+                    </tbody>
+                    <tfoot>
+                    <tr>
+                        <td><h3>Average Expenses</h3></td>
+                        <td class="align-end"><h3>$0.00</h3></td>
+                    </tr>
+                    <tr>
+                        <td><h3>Total</h3></td>
+                        <td class="align-end"><h3>$0.00</h3></td>
+                    </tr>
+                    <tr>
+                        <td><h3>Net Result</h3></td>
+                        <td class="align-end"><h3>$0.00</h3></td>
+                    </tr>
+                    </tfoot>
+                </table>
+            </div>
 
         </div>
         <a class="back" onclick="window.location.href='index.html'"><i class="fa fa-repeat"></i>Try Again</a>
