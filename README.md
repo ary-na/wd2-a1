@@ -12,3 +12,5 @@ https://fonts.google.com/specimen/Lato?category=Sans+Serif
 
 https://weekendprojects.dev/posts/css-rotate-animations-examples/
 
+https://www.figma.com/community/file/952131925958384905
+
