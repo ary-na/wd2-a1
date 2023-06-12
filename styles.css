@@ -129,6 +129,12 @@ i.fa-repeat {
     text-align: end;
 }
 
+.center {
+    justify-content: center;
+    text-align: center;
+    gap: 4rem;
+}
+
 .subtotal-padding {
     padding-bottom: 1rem;
 }
@@ -156,6 +162,11 @@ form [type] {
 form [type]:focus {
     outline: none;
     border: 1px var(--color-green-primary) solid;
+}
+
+section#results img {
+    width: 180px;
+    margin: 0 auto;
 }
 
 table {
