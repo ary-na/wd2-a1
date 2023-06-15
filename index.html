@@ -18,7 +18,7 @@
         <h1>Holiday Budget Calculator</h1>
         <p>With the help of this application, you can effortlessly calculate all the expenses associated with your
             holiday.</p>
-        <a class="next" onclick="displaySection('#main', '#budget')">Get Started<i class="fa fa-long-arrow-right"></i></a>
+        <a class="next" onclick="processInputs('#main', '#budget')">Get Started<i class="fa fa-long-arrow-right"></i></a>
     </section>
     <section id="budget" class="hidden">
         <div>
@@ -30,8 +30,8 @@
                 <input name="budget" id="budgetInput" type="number" min="0" max="10000" placeholder="Enter your budget...">
             </form>
         </div>
-        <a class="back" onclick="displaySection('#budget', '#main')"><i class="fa fa-long-arrow-left"></i>Back</a>
-        <a class="next" onclick="displaySection('#budget', '#cat1Inputs')">Next<i class="fa fa-long-arrow-right"></i></a>
+        <a class="back" onclick="processInputs('#budget', '#main')"><i class="fa fa-long-arrow-left"></i>Back</a>
+        <a class="next" onclick="processInputs('#budget', '#cat1Inputs')">Next<i class="fa fa-long-arrow-right"></i></a>
     </section>
     <section id="cat1Inputs" class="hidden">
         <div>
@@ -46,8 +46,8 @@
                 <input name="trainCost" id="trainCostInput" class="expense3Input" type="number" min="0" max="10000" placeholder="Enter train costs...">
             </form>
         </div>
-        <a class="back" onclick="displaySection('#cat1Inputs', '#budget')"><i class="fa fa-long-arrow-left"></i>Back</a>
-        <a class="next" onclick="displaySection('#cat1Inputs', '#cat2Inputs')">Next<i class="fa fa-long-arrow-right"></i></a>
+        <a class="back" onclick="processInputs('#cat1Inputs', '#budget')"><i class="fa fa-long-arrow-left"></i>Back</a>
+        <a class="next" onclick="processInputs('#cat1Inputs', '#cat2Inputs')">Next<i class="fa fa-long-arrow-right"></i></a>
     </section>
     <section id="cat2Inputs" class="hidden">
         <div>
@@ -62,8 +62,8 @@
                 <input name="motelCost" id="motelCostInput" class="expense3Input" type="number" min="0" max="10000" placeholder="Enter motel costs...">
             </form>
         </div>
-        <a class="back" onclick="displaySection('#cat2Inputs', '#cat1Inputs')"><i class="fa fa-long-arrow-left"></i>Back</a>
-        <a class="next" onclick="displaySection('#cat2Inputs', '#cat3Inputs')">Next<i class="fa fa-long-arrow-right"></i></a>
+        <a class="back" onclick="processInputs('#cat2Inputs', '#cat1Inputs')"><i class="fa fa-long-arrow-left"></i>Back</a>
+        <a class="next" onclick="processInputs('#cat2Inputs', '#cat3Inputs')">Next<i class="fa fa-long-arrow-right"></i></a>
     </section>
     <section id="cat3Inputs" class="hidden">
         <div>
@@ -78,8 +78,8 @@
                 <input name="dinnerCost" id="dinnerCostInput" class="expense3Input" type="number" min="0" max="10000" placeholder="Enter dinner costs...">
             </form>
         </div>
-        <a class="back" onclick="displaySection('#cat3Inputs', '#cat2Inputs')"><i class="fa fa-long-arrow-left"></i>Back</a>
-        <a class="next" id="calculateBtn" onclick="displaySection('#cat3Inputs', '#results')">Result<i class="fa fa-long-arrow-right"></i></a>
+        <a class="back" onclick="processInputs('#cat3Inputs', '#cat2Inputs')"><i class="fa fa-long-arrow-left"></i>Back</a>
+        <a class="next" id="calculateBtn" onclick="processInputs('#cat3Inputs', '#results')">Result<i class="fa fa-long-arrow-right"></i></a>
     </section>
     <section id="results" class="hidden">
         <div>
