@@ -90,5 +90,22 @@ function calculateNetResult(total) {
 
 // Display the results in the results table.
 function display(expensesCat1Subtotal, expensesCat2Subtotal, expensesCat3Subtotal, total, averageCostPerExpense, netResult) {
+    document.querySelector(".cat1 .expense1").innerHTML = `$${cat1expenses[0].toFixed(2)}`;
+    document.querySelector(".cat1 .expense2").innerHTML = `$${cat1expenses[1].toFixed(2)}`;
+    document.querySelector(".cat1 .expense3").innerHTML = `$${cat1expenses[2].toFixed(2)}`;
+    document.querySelector(".cat1 .subtotal h4").innerHTML = `$${expensesCat1Subtotal.toFixed(2)}`;
 
+    document.querySelector(".cat2 .expense1").innerHTML = `$${cat2expenses[0].toFixed(2)}`;
+    document.querySelector(".cat2 .expense2").innerHTML = `$${cat2expenses[1].toFixed(2)}`;
+    document.querySelector(".cat2 .expense3").innerHTML = `$${cat2expenses[2].toFixed(2)}`;
+    document.querySelector(".cat2 .subtotal h4").innerHTML = `$${expensesCat2Subtotal.toFixed(2)}`;
+
+    document.querySelector(".cat3 .expense1").innerHTML = `$${cat3expenses[0].toFixed(2)}`;
+    document.querySelector(".cat3 .expense2").innerHTML = `$${cat3expenses[1].toFixed(2)}`;
+    document.querySelector(".cat3 .expense3").innerHTML = `$${cat3expenses[2].toFixed(2)}`;
+    document.querySelector(".cat3 .subtotal h4").innerHTML = `$${expensesCat3Subtotal.toFixed(2)}`;
+
+    document.querySelector("#averageExpenses h3").innerHTML = `$${averageCostPerExpense.toFixed(2)}`;
+    document.querySelector("#total h3").innerHTML = `$${total.toFixed(2)}`;
+    document.querySelector("#netResult h3").innerHTML = `$${netResult.toFixed(2)}`;
 }
