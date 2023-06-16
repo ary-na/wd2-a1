@@ -49,38 +49,46 @@ function processInputs(currentSection, nextSection) {
 
 // Declare calculate function expression to run it when the user clicks on the results button.
 let calculate = () => {
-    let total = calculateTotalExpenses();
-    calculateNetResult(total);
+    calculateTotalExpenses();
 }
 
 // Calculate total and average expenses.
 function calculateTotalExpenses() {
-    let expensesCatOneSubtotal = calculateSubtotalPerCat(cat1expenses);
-    let expensesCatTwoSubtotal = calculateSubtotalPerCat(cat2expenses);
-    let expensesCatThreeSubtotal = calculateSubtotalPerCat(cat3expenses);
+    let expensesCat1Subtotal = calculateSubtotalPerCat(cat1expenses);
+    let expensesCat2Subtotal = calculateSubtotalPerCat(cat2expenses);
+    let expensesCat3Subtotal = calculateSubtotalPerCat(cat3expenses);
     // Sum the subtotals and store the total in the total variable.
-    let total = expensesCatOneSubtotal + expensesCatTwoSubtotal + expensesCatThreeSubtotal;
-    console.log(total);
+    let total = expensesCat1Subtotal + expensesCat2Subtotal + expensesCat3Subtotal;
     // Divide the total by nine expenses and store the average cost per expense variable.
     let averageCostPerExpense = total / 9;
-    return total;
+    let netResult = calculateNetResult(total);
+    display(expensesCat1Subtotal, expensesCat2Subtotal, expensesCat3Subtotal, total, averageCostPerExpense, netResult);
 }
 
 // Calculate subtotal expenses per category.
 function calculateSubtotalPerCat(category) {
-
-    let subtotal = category[0] + category[1] + category[2];
-    console.log(subtotal + " - ");
-    // Sum the expenses and return the total.
-    return subtotal;
+    // Return the sum of the expenses per category.
+    return category[0] + category[1] + category[2];
 }
 
 // Calculate the net result and display either happy or sad image based on the result.
 function calculateNetResult(total) {
     let netResult = budget - total;
-    if (netResult <= 0) {
-
+    let iconImage = document.querySelector("#results img");
+    let resultPara = document.querySelector("#results .center > p");
+    if (netResult < 0) {
+        iconImage.setAttribute("src", "images/sad.png");
+        iconImage.setAttribute("alt", "A sad face icon.");
+        resultPara.innerHTML = "Oh no, you have exceeded your budget.";
     } else {
-
+        iconImage.setAttribute("src", "images/smile.png");
+        iconImage.setAttribute("alt", "A smiley face icon.");
+        resultPara.innerHTML = "Congratulations! You have stayed within your budget.";
     }
+    return netResult;
+}
+
+// Display the results in the results table.
+function display(expensesCat1Subtotal, expensesCat2Subtotal, expensesCat3Subtotal, total, averageCostPerExpense, netResult) {
+
 }
