@@ -75,7 +75,7 @@ function calculateSubtotalPerCat(category) {
 function calculateNetResult(total) {
     let netResult = budget - total;
     let iconImage = document.querySelector("#results img");
-    let resultPara = document.querySelector("#results .center > p");
+    let resultPara = document.querySelector("#results .center p");
     if (netResult < 0) {
         iconImage.setAttribute("src", "images/sad.png");
         iconImage.setAttribute("alt", "A sad face icon.");
