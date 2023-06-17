@@ -101,6 +101,7 @@ function calculateNetResult(total) {
 
 // Display the results in the result's table.
 function display(expensesCat1Subtotal, expensesCat2Subtotal, expensesCat3Subtotal, total, averageCostPerExpense, netResult) {
+    // Display the result in $0.00 format.
     document.querySelector(".cat1 .expense1").innerHTML = `$${cat1expenses[0].toFixed(2)}`;
     document.querySelector(".cat1 .expense2").innerHTML = `$${cat1expenses[1].toFixed(2)}`;
     document.querySelector(".cat1 .expense3").innerHTML = `$${cat1expenses[2].toFixed(2)}`;
