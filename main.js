@@ -13,6 +13,7 @@ function processInputs(currentSection, nextSection) {
     // Remove hidden class from the current section.
     next.classList.remove("hidden");
 
+    // Get values from each input and set it to the variables.
     switch (nextSection) {
         case ("#cat1Inputs"):
             budget = document.querySelector("#budgetInput").value;
@@ -21,6 +22,8 @@ function processInputs(currentSection, nextSection) {
             let cat1expense1 = Number(document.querySelector("#cat1Inputs .expense1Input").value);
             let cat1expense2 = Number(document.querySelector("#cat1Inputs .expense2Input").value);
             let cat1expense3 = Number(document.querySelector("#cat1Inputs .expense3Input").value);
+            // Reassign array to remove previous entries.
+            cat1expenses = [];
             cat1expenses.push(cat1expense1);
             cat1expenses.push(cat1expense2);
             cat1expenses.push(cat1expense3);
@@ -29,6 +32,8 @@ function processInputs(currentSection, nextSection) {
             let cat2expense1 = Number(document.querySelector("#cat2Inputs .expense1Input").value);
             let cat2expense2 = Number(document.querySelector("#cat2Inputs .expense2Input").value);
             let cat2expense3 = Number(document.querySelector("#cat2Inputs .expense3Input").value);
+            // Reassign array to remove previous entries.
+            cat2expenses = [];
             cat2expenses.push(cat2expense1);
             cat2expenses.push(cat2expense2);
             cat2expenses.push(cat2expense3);
@@ -37,6 +42,8 @@ function processInputs(currentSection, nextSection) {
             let cat3expense1 = Number(document.querySelector("#cat3Inputs .expense1Input").value);
             let cat3expense2 = Number(document.querySelector("#cat3Inputs .expense2Input").value);
             let cat3expense3 = Number(document.querySelector("#cat3Inputs .expense3Input").value);
+            // Reassign array to remove previous entries.
+            cat3expenses = [];
             cat3expenses.push(cat3expense1);
             cat3expenses.push(cat3expense2);
             cat3expenses.push(cat3expense3);
@@ -73,9 +80,13 @@ function calculateSubtotalPerCat(category) {
 
 // Calculate the net result and display either happy or sad image based on the result.
 function calculateNetResult(total) {
+    // Calculate the net result.
     let netResult = budget - total;
+    // Get the img and para elements.
     let iconImage = document.querySelector("#results img");
     let resultPara = document.querySelector("#results .center p");
+
+    // display different icon and text based on the net result value.
     if (netResult < 0) {
         iconImage.setAttribute("src", "images/sad.png");
         iconImage.setAttribute("alt", "A sad face icon.");
@@ -88,7 +99,7 @@ function calculateNetResult(total) {
     return netResult;
 }
 
-// Display the results in the results table.
+// Display the results in the result's table.
 function display(expensesCat1Subtotal, expensesCat2Subtotal, expensesCat3Subtotal, total, averageCostPerExpense, netResult) {
     document.querySelector(".cat1 .expense1").innerHTML = `$${cat1expenses[0].toFixed(2)}`;
     document.querySelector(".cat1 .expense2").innerHTML = `$${cat1expenses[1].toFixed(2)}`;
